@@ -14,7 +14,32 @@ header {
     text-align: center;
 }
 
-/* ... (rest of your existing styles) ... */
+nav {
+    text-align: center;
+    margin-top: 10px;
+}
+nav a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #ffffff;
+    color: #fff;
+    margin-top: 20px;
+}
 
 .project-grid {
     display: grid;
