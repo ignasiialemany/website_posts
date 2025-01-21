@@ -3,44 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ignasi Alemany - Projects</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Ignasi Alemany</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #f8f9fa;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        main {
+            flex: 1;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Ignasi Alemany</h1>
-        <p>Exploring AI/ML, computer vision and scientific computing</p>
+        <p>Welcome to my website</p>
     </header>
 
     <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>
-                Hi, I'm Ignasi Alemany, a researcher in Imperial College London working on computation simulations in cardiac diffusion tensor imaging (cDTI). In this page you can find my projects mostly related to AI/ML, computer vision and scientific computing.
-            </p>
-        </section>
-
-        <div id="projects-container"></div>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>
-                Feel free to reach out via <a href="mailto:ia4118@ic.ac.uk">email</a> or connect with me on 
-                <a href="https://www.linkedin.com/in/ignasi-alemany-b5367312b/" target="_blank">LinkedIn</a>.
-            </p>
-        </section>
+        <h2>Main Content</h2>
+        <p>This is where your main content will go.</p>
     </main>
 
     <footer>
-        <p>&copy; 2025 Ignasi Alemany</p>
+        <p>&copy; 2024 Ignasi Alemany</p>
     </footer>
-
-    <script>
-        $(document).ready(function() {
-            $('#projects-container').load('projects.html');
-        });
-    </script>
 </body>
 </html>
