@@ -35,7 +35,7 @@ def project_page(project_index):
     projects = load_project("projects.json")
     print(projects)
     project = projects[project_index]
-    with open(project["notebook_file"], 'r') as file:
+    with open("html_notebooks/"+project["notebook_file"], 'r') as file:
         notebook_html = file.read()
     return render_template('projects.html',title=project["title"],description=project["description"],notebook_content=notebook_html)
 

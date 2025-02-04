@@ -2,7 +2,7 @@
     "projects": [
       {
         "title": "Bayesian Linear Regressions",
-        "description": "Implementing and understanding Bayesian Linear Regressions using JAX. In this post I derive the Maximum Likelihood Estimator (MLE), the Maximum A Posteriori (MAP) considering a Gaussian and Laplace prior (Introducing L1 and L2 regularisation).",
+        "description": "Implementing and understanding Bayesian Linear Regressions using JAX. In this post I derive the Maximum Likelihood Estimator (MLE), the Maximum A Posteriori (MAP) considering a Gaussian and Laplace prior (Deriving L1 and L2 regularisation).",
         "notebook_file": "BayesianLinearRegression.html"
       },
       {
