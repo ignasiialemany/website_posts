@@ -68,17 +68,13 @@
         <p>Welcome to my website. I am a researcher in Imperial College London working on computation simulations in cardiac diffusion tensor imaging (cDTI). In this page you can find my projects mostly related to AI/ML, computer vision and scientific computing.</p>
         
         <h1>Projects</h1>
+        {% for project in projects%}
         <div class="project-card">
-            <h3>Bayesian Linear Regressions</h3>
-            <p>Implementing and understanding Bayesian Linear Regressions using JAX. In this post I derive the Maximum Likelihood Estimator (MLE), the Maximum A Posteriori (MAP) considering a Gaussian and Laplace prior (Introducing L1 and L2 regularisation).</p>
-            <p><a href="/bayesian_linear_regressions" >View Project</a></p>
+            <h3>{{project.title}}</h3>
+            <p>{{project.description}}</p>
+            <p><a href="/projects_{{loop.index0}}" >View Project</a></p>
         </div>
-
-        <div class="project-card">
-            <h3>Principal Component Analysis (PCA)</h3>
-            <p>Implementing PCA using the MNIST dataset.</p>
-        </div>
-
+        {% endfor %}
     </main>
 
     <footer>

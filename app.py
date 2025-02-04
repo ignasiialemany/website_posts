@@ -2,6 +2,7 @@ from flask import Flask, render_template
 import nbconvert
 import nbformat
 import os
+import json
 from bs4 import BeautifulSoup
 
 app = Flask(__name__)
@@ -19,21 +20,24 @@ def convert_notebook_to_html(ipynb_path):
     except Exception as e:
         return f"Error loading notebook: {str(e)}"
 
+
+def load_project(project_name):
+    with open(project_name, 'r') as file:
+        return json.load(file)["projects"]
+
 @app.route('/')
 def index():
-    return render_template('index.html')
+    projects = load_project("projects.json")
+    return render_template('index.html',projects=projects)
 
-@app.route('/bayesian_linear_regressions')
-def project_bayesian_linear_regressions():
-    with open('BayesianLinearRegression.html', 'r') as file:
+@app.route('/projects_<int:project_index>')
+def project_page(project_index):
+    projects = load_project("projects.json")
+    print(projects)
+    project = projects[project_index]
+    with open(project["notebook_file"], 'r') as file:
         notebook_html = file.read()
-    soup = BeautifulSoup(notebook_html, 'html.parser')
-    body_content = soup.body.encode_contents().decode()
-    return render_template('BayesianLinearRegression.html',notebook_content=notebook_html,title="Bayesian Linear Regressions")
-
-@app.route('/project_PINNs')
-def project_PINNs():
-    return render_template('PCA.html')
+    return render_template('projects.html',title=project["title"],description=project["description"],notebook_content=notebook_html)
 
 if __name__ == '__main__':
     app.run(debug=True)
