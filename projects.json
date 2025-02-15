@@ -16,9 +16,24 @@
         "notebook_file": "LogisticRegression.html"
       },
       {
-        "title": "Physics-Informed Neural Networks (PINNs)",
-        "description": "Implementing Physics-Informed Neural Networks (PINNs) to solve the diffusion equation.",
-        "notebook_file": "PINNs.html"
+        "title": "NLP on Electronic Health Records (EHR)",
+        "description": "Extract insights from unstructured clinical notes using Natural Language Processing techniques. This project includes text cleaning, embedding generation (e.g., using word2vec or BERT), and basic classification to predict patient outcomes or flag critical cases.",
+        "notebook_file": "EHR_NLP.html"
+      },
+      {
+        "title": "Anomaly Detection in Patient Vital Signs",
+        "description": "Detect anomalies in patient vital signs data using unsupervised methods (e.g., Isolation Forest or Autoencoders). This notebook simulates real-time monitoring scenarios to spot early signs of deterioration.",
+        "notebook_file": "AnomalyDetection.html"
+      },
+      {
+        "title": "Medical Image Classification using Transfer Learning",
+        "description": "Leverage pre-trained convolutional neural networks (CNNs) to classify medical images (e.g., chest X-rays or dermatology images). This notebook walks through fine-tuning a model to identify key pathologies while explaining the challenges of limited labeled data.",
+        "notebook_file": "MedicalImageClassification.html"
+      },
+      {
+        "title": "Explainable AI in Healthcare",
+        "description": "Implement techniques such as SHAP or LIME to explain predictions made by a black-box model on a healthcare dataset. This project emphasizes model interpretability, which is crucial in clinical settings for gaining trust from medical professionals.",
+        "notebook_file": "ExplainableAI.html"
       }
     ]
 }

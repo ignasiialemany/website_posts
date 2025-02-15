@@ -55,6 +55,31 @@
             margin-bottom: 10px;
         }
        
+        .columns-container {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+    
+        .column {
+            flex: 1;
+            min-width: 0; /* Prevents columns from overflowing */
+        }
+    
+        .card {
+            border: 1px solid #0b0b0b;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+    
+        /* Make it responsive for mobile devices */
+        @media (max-width: 768px) {
+            .columns-container {
+                flex-direction: column;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -67,14 +92,30 @@
         <h1>About me</h1>
         <p>Welcome to my website. I am a researcher in Imperial College London working on computation simulations in cardiac diffusion tensor imaging (cDTI). In this page you can find my projects mostly related to AI/ML, computer vision and scientific computing.</p>
         
-        <h1>Posts</h1>
-        {% for project in projects%}
-        <div class="project-card">
-            <h3>{{project.title}}</h3>
-            <p>{{project.description}}</p>
-            <p><a href="/projects_{{loop.index0}}" >View Project</a></p>
+        <div class="columns-container">
+            <div class="column">
+                <h1>Projects</h1>
+                {% for post in posts %}
+                <div class="card">
+                    <h3>{{post.title}}</h3>
+                    <p>{{post.description}}</p>
+                    <p><a href="/posts_{{loop.index0}}">View Post</a></p>
+                </div>
+                {% endfor %}
+            </div>
+            
+            <div class="column">
+                <h1>Posts</h1>
+                {% for project in projects %}
+                <div class="card">
+                    <h3>{{project.title}}</h3>
+                    <p>{{project.description}}</p>
+                    <p><a href="/projects_{{loop.index0}}">View Project</a></p>
+                </div>
+                {% endfor %}
+            </div>
         </div>
-        {% endfor %}
+        
     </main>
 
     <footer>
